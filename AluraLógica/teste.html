@@ -7,13 +7,24 @@
 </head>
 <body>
     <script>
+        function pulaLinha(){
+            document.write("<br>");
+        }
+
+        function mostra(text){
+
+            document.write(text);
+            pulaLinha();
+
+        }
         let idade = 20;
         alert('Isso é um programa');
-        document.write('Olá, mundo!' + '<br>');
-        document.write('Minha idade é ' + idade + '<br>');
+
+        mostra('Olá, mundo!');
+        mostra('Minha idade é ' + idade);
 
         let media = (40 + 20) / 3;
-        document.write('A média é ' + media);
+        mostra('A média é ' + media);
     </script>
 </body>
 </html>
