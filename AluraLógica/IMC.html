@@ -30,5 +30,13 @@
 
         mostra(`O imc de ${nome} é igual a ${Math.round(imc)}`);
 
+        if (imc < 18.5){
+            mostra("Você está abaixo do recomendado");
+            } else if (imc > 35){
+            mostra("Você está acima do recomendado")
+            } else {
+                mostra("Você está na média. Parabéns!");
+        }
+
 
     </script>

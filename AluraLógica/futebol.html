@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futebol</title>
+</head>
+<body>
+    <script>
+        function pulaLinha(){
+            document.write("<br>");
+        }
+
+        function mostra(text){
+
+            document.write(text);
+            pulaLinha();
+
+        }
+
+        let vitorias = parseInt(prompt("Digite o número de vitórias do ano passado"));
+        let empates = parseInt(prompt("Digite o número de empates do ano passado"));
+
+        let pontos = vitorias * 3 + empates;
+        mostra(`Os pontos dos seu time foi ${pontos} pontos`);
+
+        let novasVitorias = parseInt(prompt("Digite o número de vitórias deste ano"));
+        let novosEmpates = parseInt(prompt("Digite o número de empates deste ano"));
+        let novosPontos = novasVitorias * 3 + novosEmpates;
+
+        if (novosPontos > pontos) {
+            mostra("O time conseguiu mais pontos do que no ano passado!");
+            } else if (novosPontos == pontos) {
+                mostra("O resultado é um empate!");
+                } else{
+                    mostra("Ops... O time não conseguiu tantos pontos como no ano passado");
+                }
+
+
+    </script>
