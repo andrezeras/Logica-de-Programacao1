@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média das idades</title>
+</head>
+<body>
+    <script>
+        function pulaLinha(){
+            document.write("<br>");
+        }
+
+        function mostra(text){
+
+            document.write(text);
+            pulaLinha();
+
+        }
+        
+        let totalFamiliares = parseInt(prompt("Quantidade de familiares:"));
+        let familiar = 1
+        let totalIdades = 0;
+        while(familiar <= totalFamiliares){
+            let idadeFamiliar = parseInt(prompt("Informe a idade do familiar:"));
+            totalIdades = totalIdades + idadeFamiliar;
+            familiar++;
+        }
+        let mediaIdades = totalIdades / totalFamiliares;
+        mostra(`A média das idades do familiares é ${parseInt(mediaIdades)}`);
+    </script>
+</body>

@@ -20,14 +20,19 @@
 
         let numeroPensado = Math.round(Math.random() * 10);
         console.log(numeroPensado);
-        let chute = parseInt(prompt("Digite o numero que deseja chutar!"));
-        if (chute == numeroPensado) {
-            mostra("Parabéns você acertou!");
-            } else if (chute > numeroPensado) {
-                mostra("O seu chute foi maior do que o número pensado.");
-                } else{
-                    mostra("O seu chute foi menor do que o número pensado.")
-                    };
-                    
+        let tentativas = 1;
 
+        while (tentativas <= 3) {
+            let chute = parseInt(prompt("Digite um número entre 0 e 10"));
+            if (chute == numeroPensado){
+                mostra("Você acertou!")
+                break;
+            }else{
+                alert("Você errou... Tente novamente!");
+                
+                
+            }
+
+            tentativas++;
+        }
     </script>
